@@ -1,0 +1,12 @@
+# 不进 npm 包的内容
+# （package.json 的 files 白名单已限制，这里是第二道保险）
+lib/*.bak-*
+*.bak-*
+test/
+design/
+.backup/
+
+src/
+.review/
+*.tmp-*
+probe.log*

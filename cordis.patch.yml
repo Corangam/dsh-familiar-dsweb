@@ -1,0 +1,4 @@
+# dsh-familiar-dsweb bundle patch：把本插件插入 profile 的层栈。
+- insert:
+    - id: dsh-familiar-dsweb
+      name: 'dsh-familiar-dsweb'

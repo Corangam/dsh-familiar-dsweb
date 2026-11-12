@@ -1,0 +1,36 @@
+dsh-familiar-dsweb
+Copyright (c) 2026 Corangam
+
+This package is licensed under the PolyForm Noncommercial License 1.0.0.
+The full license text is in the LICENSE file at the root of this package.
+
+NONCOMMERCIAL ONLY. You may use, modify and share this software for
+noncommercial purposes only. Commercial use of any kind requires a
+separate written license from the copyright holder.
+
+---------------------------------------------------------------------------
+THIRD-PARTY ASSETS
+---------------------------------------------------------------------------
+
+The plugin icon (assets/icon.png, assets/icon-48.png) is NOT covered by the
+PolyForm Noncommercial License. It is a third-party work distributed under
+a different Creative Commons license.
+
+  Asset:      DeepSeek whale-girl character artwork
+  Source:     https://treapgogo.github.io/deepseek-whale-girl/
+  Author:     treapgogo
+  License:    Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+              International (CC BY-NC-SA 4.0)
+  License URL: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  Full text:  licenses/deepseek-whale-girl/LICENSE-CC-BY-NC-SA-4.0.txt
+
+Attribution and share-alike obligations for the icon remain in force.
+Both licenses prohibit commercial use, so the package as a whole is
+noncommercial.
+
+---------------------------------------------------------------------------
+NO OTHER THIRD-PARTY CODE
+---------------------------------------------------------------------------
+
+All source code in lib/ is original work written for this package.
+No third-party source code is vendored, bundled or linked.

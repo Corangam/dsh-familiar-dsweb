@@ -1,0 +1,32 @@
+# ── 依赖 ──
+node_modules/
+
+# ── 历史备份（本地留档，不入库）──
+# 覆盖所有格式：xxx.bak-20261112-1415 / xxx.bak2 / xxx.reviewed-v1.0.0
+lib/*.bak*
+*.bak*
+lib/*.reviewed*
+*.reviewed*
+.backup/
+.review/
+
+# ── 打包产物 ──
+*.tgz
+*.tar.gz
+
+# ── 本地数据与日志 ──
+probe.log*
+ui.json
+session.json
+
+# ── 设计草稿与预览（本地工作产物）──
+design/
+
+# ── 插件内部调试目录 ──
+.dsh-ops/
+.tmp-*
+
+# ── 系统 ──
+.DS_Store
+Thumbs.db
+desktop.ini
