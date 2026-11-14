@@ -2,8 +2,44 @@
 
 DSH 桌面端的悬浮小助手：左侧栏入口 + 可拖拽悬浮窗，内嵌 DeepSeek 网页版。
 
-> **当前版本：v1.0.0**
+随手查点小事，不用另开 DSH 窗口，也不污染当前任务的上下文。
+
+<p align="center">
+  <img src="./docs/screenshot-dark.jpg" width="420" alt="深色主题下的悬浮小助手">
+</p>
+
+> **当前版本：v1.0.0** · [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.0) · [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)
 > 作者：[Corangam](https://github.com/Corangam)
+
+---
+
+## 快速开始
+
+```bash
+dsh plugin --profile desktop add dsh-familiar-dsweb
+```
+
+装完**重启 DSH 桌面端**（插件不热重载）。入口在**左侧栏底部**的小头像。
+
+<details>
+<summary>手动安装（直接写 profile）</summary>
+
+编辑 `~/.dsh/profiles/<profile>/package.json`：
+
+```json
+{
+  "dependencies": { "dsh-familiar-dsweb": "^1.0.0" },
+  "dsh": { "profile": { "bundles": ["...", "dsh-familiar-dsweb"] } }
+}
+```
+
+</details>
+
+### 装之前请先看这三条
+
+1. **会存明文登录 token** —— 位置在 `~/.dsh/plugin-data/dsh-familiar-dsweb/session.json`，只在本机，不上传任何地方。
+2. **无遥测、无统计、无外部服务** —— 除了内嵌的 `chat.deepseek.com`，没有任何对外请求。
+3. **介意明文存储请勿安装。**
 
 ---
 
@@ -59,8 +95,8 @@ DSH 桌面端
 │   └─ 提供 dshDesktop.browser.acquire / <webview> 租约校验
 ├─ Node host 进程
 │   └─ lib/index.js（host 半区）
-│       ├─ /dsh-companion/api?action=...   业务接口
-│       └─ /dsh-companion/assets/...        图标静态资源
+│       ├─ /dsh-familiar-dsweb/api?action=...   业务接口
+│       └─ /dsh-familiar-dsweb/assets/...        图标静态资源
 └─ 渲染进程（dsh-app://app）
     └─ lib/client.js（client 半区）
         ├─ 左侧栏入口按钮
@@ -88,7 +124,7 @@ DSH 桌面端
 
 2. **webview 需要主进程租约**
    ```js
-   const reservation = await dshDesktop.browser.acquire("dsh-companion");
+   const reservation = await dshDesktop.browser.acquire("dsh-familiar-dsweb");
    webview.setAttribute("name", reservation.lease);
    webview.setAttribute("partition", reservation.partition);
    webview.setAttribute("src", "about:blank#" + reservation.lease);
@@ -115,7 +151,7 @@ DSH 桌面端
 ## 四、目录结构
 
 ```
-dsh-companion/
+dsh-familiar-dsweb/
 ├── package.json          # 包声明（v1.0.0）
 ├── cordis.patch.yml      # profile 插入声明
 ├── README.md             # 本文件
@@ -135,12 +171,18 @@ dsh-companion/
 
 ## 五、安装
 
-编辑 `~/.dsh/profiles/<profile>/package.json`：
+从 npm 安装（推荐）：
+
+```bash
+dsh plugin --profile desktop add dsh-familiar-dsweb
+```
+
+本地开发时改用 link：
 
 ```json
 {
-  "dependencies": { "dsh-companion": "link:<插件绝对路径>" },
-  "dsh": { "profile": { "bundles": [ "...", "dsh-companion" ] } }
+  "dependencies": { "dsh-familiar-dsweb": "link:<插件绝对路径>" },
+  "dsh": { "profile": { "bundles": [ "...", "dsh-familiar-dsweb" ] } }
 }
 ```
 
@@ -151,7 +193,7 @@ dsh-companion/
 ## 六、数据与日志
 
 ```
-~/.dsh/plugin-data/dsh-companion/
+~/.dsh/plugin-data/dsh-familiar-dsweb/
 ├── session.json    # 登录态（明文 token + userInfo）
 ├── ui.json         # 窗口位置/尺寸 + lastUrl + fontScale
 ├── probe.log       # 诊断日志（上限 1MB，超限轮转为 probe.log.1）

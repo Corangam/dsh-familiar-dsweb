@@ -3,7 +3,32 @@
 A floating companion for DSH Desktop: a draggable window embedding the DeepSeek web chat,
 so you can open a free side conversation without leaving your work.
 
+<p align="center">
+  <img src="./docs/screenshot-dark.jpg" width="420" alt="The floating companion in dark theme">
+</p>
+
 > **v1.0.0** — stable. UI frozen; behaviour verified.
+> [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.0) ·
+> [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)
+
+---
+
+## Quick start
+
+```bash
+dsh plugin --profile desktop add dsh-familiar-dsweb
+```
+
+Then **restart DSH Desktop** (the plugin does not hot-reload). The entry sits at the
+**bottom of the left sidebar**.
+
+### Three things to know first
+
+1. **It stores your login token in plain text** at
+   `~/.dsh/plugin-data/dsh-familiar-dsweb/session.json` — local only, never uploaded.
+2. **No telemetry, no analytics, no external service.** The only remote origin is the
+   embedded `chat.deepseek.com`.
+3. **If plaintext token storage bothers you, do not install it.**
 
 ---
 
