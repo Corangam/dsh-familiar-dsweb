@@ -5,7 +5,9 @@ DSH 桌面端的悬浮小助手：左侧栏入口 + 可拖拽悬浮窗，内嵌 
 随手查点小事，不用另开 DSH 窗口，也不污染当前任务的上下文。
 
 <p align="center">
-  <img src="./docs/screenshot-dark.jpg" width="420" alt="深色主题下的悬浮小助手">
+  <img src="./docs/screenshot-dark.jpg" width="420" alt="深色主题下的悬浮小助手（设计稿渲染）">
+  <br>
+  <sub>深色主题 · 界面设计稿渲染（非真机截图）</sub>
 </p>
 
 > **当前版本：v1.0.0** · [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.0) · [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)

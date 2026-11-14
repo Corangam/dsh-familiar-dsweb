@@ -4,7 +4,9 @@ A floating companion for DSH Desktop: a draggable window embedding the DeepSeek 
 so you can open a free side conversation without leaving your work.
 
 <p align="center">
-  <img src="./docs/screenshot-dark.jpg" width="420" alt="The floating companion in dark theme">
+  <img src="./docs/screenshot-dark.jpg" width="420" alt="The floating companion in dark theme (design render)">
+  <br>
+  <sub>Dark theme · rendered from the UI design, not a live screenshot</sub>
 </p>
 
 > **v1.0.0** — stable. UI frozen; behaviour verified.
