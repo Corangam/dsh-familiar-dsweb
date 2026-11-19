@@ -9,8 +9,8 @@ so you can open a free side conversation without leaving your work.
   <sub>Dark theme · rendered from the UI design, not a live screenshot</sub>
 </p>
 
-> **v1.0.0** — stable. UI frozen; behaviour verified.
-> [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.0) ·
+> **v1.0.1** — stable. UI unchanged; release metadata only.
+> [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.1) ·
 > [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)
 
 ---

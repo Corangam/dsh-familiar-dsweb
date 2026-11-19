@@ -1,16 +1,22 @@
 {
   "name": "dsh-familiar-dsweb",
-  "version": "1.0.0",
-  "description": "DSH 桌面端悬浮小助手：内嵌 DeepSeek 网页版的浮动聊天窗，随手开一个免费对话。",
+  "version": "1.0.1",
+  "description": "Floating DeepSeek chat assistant for DSH Desktop: a draggable in-app webview panel that opens chat.deepseek.com as a side chat, so a quick question never pollutes your main coding session. 悬浮小助手。",
   "keywords": [
     "dsh",
     "dsh-plugin",
     "deepseek-harness",
     "deepseek",
+    "deepseek-chat",
     "webview",
     "floating-window",
+    "floating-panel",
+    "side-chat",
     "companion",
-    "familiar"
+    "assistant",
+    "chat-widget",
+    "electron",
+    "desktop"
   ],
   "author": {
     "name": "Corangam"

@@ -4,6 +4,37 @@
 
 ---
 
+## v1.0.1 — 2026-11-20 · 修复 npm 页面文档与检索元数据
+
+**运行代码零改动**：`lib/index.js` 与 `lib/client.js` 与 v1.0.0 逐字节相同，
+本次只修发布面（registry 上那份不会被 GitHub 更新自动同步的副本）。
+
+### 修复
+
+- **npm 页面上的 README 是旧版**
+  registry 里的 README 是 v1.0.0 发布时刻（2026-11-12）的快照，此后 GitHub 上的修订
+  从未同步。旧版没有「快速开始」，安装章节写的包名还是 `dsh-companion`（实际包名为
+  `dsh-familiar-dsweb`），且指引为 `link:<本地路径>` —— 照它操作会装不上。
+  本次随版重发，registry 上恢复为当前 README。
+- **`package.json` 的 description 与 keywords 改为英文主词**
+  原 description 为纯中文、keywords 仅 8 项，npm 搜索的中文分词失效，官方 search API
+  实测三条查询（包名 / desktop companion / floating assistant）全部未命中。
+  现 description 以英文主词开头、keywords 扩到 14 项，中文仅作尾注保留。
+
+### 打包
+
+- **备份文件不再混入发布包**
+  `npm pack` 会无视 `.npmignore` 与 `files` 白名单强制收录 `README*`，
+  放在包根目录的 `README.md.bak-*` 会被一并发布。备份已移入 `.backup/`。
+
+### 已核对未改动
+
+- 安装方式 `dsh plugin --profile <p> add dsh-familiar-dsweb` 实测可用：
+  `dependencies` 与 `dsh.profile.bundles` 自动双双追加，无需手工编辑。
+- 现有测试全绿：client 10/10、host 18/18。
+
+---
+
 ## v1.0.0 — 2026-11-12 · 正式定稿
 
 首个正式版。以「行为不变、缺陷清零」为原则做了一轮完整代码审查：

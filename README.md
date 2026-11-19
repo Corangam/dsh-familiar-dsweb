@@ -10,7 +10,7 @@ DSH 桌面端的悬浮小助手：左侧栏入口 + 可拖拽悬浮窗，内嵌 
   <sub>深色主题 · 界面设计稿渲染（非真机截图）</sub>
 </p>
 
-> **当前版本：v1.0.0** · [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.0) · [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)
+> **当前版本：v1.0.1** · [Release](https://github.com/Corangam/dsh-familiar-dsweb/releases/tag/v1.0.1) · [npm](https://www.npmjs.com/package/dsh-familiar-dsweb)
 > 作者：[Corangam](https://github.com/Corangam)
 
 ---
@@ -154,7 +154,7 @@ DSH 桌面端
 
 ```
 dsh-familiar-dsweb/
-├── package.json          # 包声明（v1.0.0）
+├── package.json          # 包声明（v1.0.1）
 ├── cordis.patch.yml      # profile 插入声明
 ├── README.md             # 本文件
 ├── assets/
